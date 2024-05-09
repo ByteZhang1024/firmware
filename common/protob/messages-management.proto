@@ -136,6 +136,7 @@ message Features {
     optional uint32 auto_lock_delay_ms = 38;    // number of milliseconds after which the device locks itself
     optional uint32 display_rotation = 39;      // in degrees from North
     optional bool experimental_features = 40;   // are experimental message types enabled?
+    optional bool busy = 41;                    // is the device busy, showing "Do not disconnect"?
 
     optional uint32 offset = 500;
     optional string ble_name = 501;             // OneKey BLE name
@@ -158,7 +159,7 @@ message Features {
     optional uint32 coin_switch = 517;
     optional bytes build_id = 518;
     optional string boardloader_version = 519;
-    optional bool busy = 41;                    // is the device busy, showing "Do not disconnect"?
+    optional uint32 battery_level = 520;
 
     optional OneKeyDeviceType onekey_device_type = 600;
     optional OneKeySeType onekey_se_type = 601;
