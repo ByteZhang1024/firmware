@@ -553,8 +553,6 @@ enum MessageType {
     MessageType_DnxInputAck = 11804 [(wire_in) = true];
     MessageType_DnxRTSigsRequest = 11805 [(wire_in) = true];
     MessageType_DnxSignedTx = 11806 [(wire_out) = true];
-    MessageType_DnxGetTrackingKey = 11807 [(wire_in) = true];
-    MessageType_DnxTrackingKey = 11808 [(wire_out) = true];
 
     // ton
     MessageType_TonGetAddress = 11901 [(wire_in) = true];
