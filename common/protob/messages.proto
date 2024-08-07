@@ -556,6 +556,14 @@ enum MessageType {
     MessageType_DnxGetTrackingKey = 11807 [(wire_in) = true];
     MessageType_DnxTrackingKey = 11808 [(wire_out) = true];
 
+    // ton
+    MessageType_TonGetAddress = 11901 [(wire_in) = true];
+    MessageType_TonAddress = 11902 [(wire_out) = true];
+    MessageType_TonSignMessage = 11903 [(wire_in) = true];
+    MessageType_TonSignedMessage = 11904 [(wire_out) = true];
+    MessageType_TonSignProof = 11905 [(wire_in) = true];
+    MessageType_TonSignedProof = 11906 [(wire_out) = true];
+
     // onekey
     MessageType_DeviceBackToBoot = 903 [(wire_in) = true];
     MessageType_DeviceInfoSettings = 10001 [(wire_in) = true];
