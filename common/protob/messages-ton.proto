@@ -63,6 +63,9 @@ message TonSignMessage {
     optional TonWorkChain workchain = 13 [default=BASECHAIN];       // 0: BaseChain, 1: MasterChain
     optional bool is_bounceable = 14 [default=false];               // bounceable flag
     optional bool is_testnet_only = 15 [default=false];             // testnet only flag
+    optional string ext_destination = 16;
+    optional uint64 ext_ton_amount = 17;
+    optional string ext_payload = 18;
 }
 
 /**
