@@ -68,6 +68,7 @@ message TonSignMessage {
     repeated string ext_destination = 18;
     repeated uint64 ext_ton_amount = 19;
     repeated string ext_payload = 20;
+    optional bytes jetton_amount_bytes = 21;
 }
 
 /**
