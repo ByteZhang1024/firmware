@@ -60,6 +60,7 @@ enum OneKeyDeviceType {
     MINI = 0x02;
     TOUCH = 0x03;
     PRO = 0x05;
+    PURE = 0x06;
 }
 
 enum OneKeySeType {
@@ -204,7 +205,7 @@ message OnekeyFeatures {
     optional string onekey_board_build_id = 8;
     optional string onekey_boot_build_id = 9;
     optional string onekey_firmware_build_id = 10;
-    optional string onekey_serial_no = 11;    
+    optional string onekey_serial_no = 11;
     optional string onekey_ble_name = 12;
     optional string onekey_ble_version = 13;
     optional string onekey_ble_build_id = 14;
@@ -215,7 +216,7 @@ message OnekeyFeatures {
     optional OneKeySEState onekey_se01_state = 17;
     optional OneKeySEState onekey_se02_state = 18;
     optional OneKeySEState onekey_se03_state = 19;
-    optional OneKeySEState onekey_se04_state = 20;    
+    optional OneKeySEState onekey_se04_state = 20;
     optional string onekey_se01_version = 21;
     optional string onekey_se02_version = 22;
     optional string onekey_se03_version = 23;
@@ -227,7 +228,7 @@ message OnekeyFeatures {
     optional string onekey_se01_build_id = 29;
     optional string onekey_se02_build_id = 30;
     optional string onekey_se03_build_id = 31;
-    optional string onekey_se04_build_id = 32;    
+    optional string onekey_se04_build_id = 32;
     optional string onekey_se01_boot_version = 33;
     optional string onekey_se02_boot_version = 34;
     optional string onekey_se03_boot_version = 35;
@@ -239,7 +240,7 @@ message OnekeyFeatures {
     optional string onekey_se01_boot_build_id = 41;
     optional string onekey_se02_boot_build_id = 42;
     optional string onekey_se03_boot_build_id = 43;
-    optional string onekey_se04_boot_build_id = 44;    
+    optional string onekey_se04_boot_build_id = 44;
 }
 
 /**
