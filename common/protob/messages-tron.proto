@@ -104,8 +104,16 @@ message TronSignTx {
             optional uint64 balance = 3;
             optional string receiver_address = 4;
         }
-
+        message TronVoteWitnessContract {
+            message Vote {
+                required string vote_address = 1;
+                required uint32 vote_count = 2;
+            }
+            repeated Vote votes = 2;
+            optional bool support = 3;
+        }
         optional TronTransferContract transfer_contract = 2;
+        optional TronVoteWitnessContract vote_witness_contract = 4;
         optional TronFreezeBalanceContract freeze_balance_contract = 11;
         optional TronUnfreezeBalanceContract unfreeze_balance_contract = 12;
         optional TronWithdrawBalanceContract withdraw_balance_contract = 13;
