@@ -35,7 +35,7 @@ message TronSignTx {
     required bytes ref_block_bytes = 2;             // Reference block number
     required bytes ref_block_hash = 3;              // Reference block hash
     required uint64 expiration = 4;                 // Transaction expiration
-    optional string data = 5;                       // Extra transaction info
+    optional bytes data = 5;                       // Extra transaction info
     required TronContract contract = 6;             // Contract messages
     required uint64 timestamp = 7;                  // UTC timestamp
     optional uint64 fee_limit = 8;                  // Fee limit for smartcontracts
@@ -63,6 +63,7 @@ message TronSignTx {
         enum TronResourceCode {
             BANDWIDTH = 0x00;
             ENERGY = 0x01;
+            TRON_POWER = 0x02;
         }
 
         // Freeze TRX balance
@@ -113,7 +114,10 @@ message TronSignTx {
             optional bool support = 3;
         }
         optional TronTransferContract transfer_contract = 2;
+        optional bytes provider = 3;
         optional TronVoteWitnessContract vote_witness_contract = 4;
+        optional bytes contract_name = 5;
+        optional uint32 permission_id = 6;
         optional TronFreezeBalanceContract freeze_balance_contract = 11;
         optional TronUnfreezeBalanceContract unfreeze_balance_contract = 12;
         optional TronWithdrawBalanceContract withdraw_balance_contract = 13;
