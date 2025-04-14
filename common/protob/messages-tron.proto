@@ -113,6 +113,8 @@ message TronSignTx {
             repeated Vote votes = 2;
             optional bool support = 3;
         }
+        message TronCancelAllUnfreezeV2Contract {
+        }
         optional TronTransferContract transfer_contract = 2;
         optional bytes provider = 3;
         optional TronVoteWitnessContract vote_witness_contract = 4;
@@ -127,6 +129,7 @@ message TronSignTx {
         optional TronWithdrawExpireUnfreezeContract withdraw_expire_unfreeze_contract = 56;
         optional TronDelegateResourceContract delegate_resource_contract = 57;
         optional TronUnDelegateResourceContract undelegate_resource_contract = 58;
+        optional TronCancelAllUnfreezeV2Contract cancel_all_unfreeze_v2_contract = 59;
     }
 }
 
