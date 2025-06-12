@@ -634,4 +634,6 @@ enum MessageType {
     MessageType_OnekeyGetFeatures = 10025 [(wire_in) = true];
     MessageType_OnekeyFeatures = 10026 [(wire_out) = true];
 
+    MessageType_GetPassphraseState = 10028 [(wire_in) = true];
+    MessageType_PassphraseState = 10029 [(wire_out) = true];
 }
