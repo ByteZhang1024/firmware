@@ -952,6 +952,9 @@ message DeviceEraseSector {
     required uint32 sector = 1;
 }
 
+message UnLockDevice {
+}
+
 message GetPassphraseState {
     optional string passphrase_state = 1;
 }
