@@ -37,6 +37,7 @@ message Initialize {
     optional bool _skip_passphrase = 2 [deprecated=true]; // removed as part of passphrase redesign
     optional bool derive_cardano = 3;  // whether to derive Cardano Icarus root keys in this session
     optional string passphrase_state = 8000;
+    optional bool is_contains_attach = 8001; // Enable the attach pin function; otherwise, an error will be reported when using attach pin
 }
 
 /**
