@@ -954,6 +954,11 @@ message DeviceEraseSector {
 
 message UnLockDevice {
 }
+message UnLockDeviceResponse {
+    optional bool unlocked = 1;
+    optional bool unlocked_attach_pin = 2;
+    optional bool passphrase_protection = 3;
+}
 
 message GetPassphraseState {
     optional string passphrase_state = 1;
