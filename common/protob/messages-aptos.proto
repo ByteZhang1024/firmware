@@ -74,3 +74,13 @@ message AptosMessageSignature {
     required bytes signature = 1;
     required string address = 2;
 }
+
+/**
+ * Request: ask device to sign SIWA message
+ * @start
+ * @next AptosMessageSignature
+ */
+message AptosSignSIWAMessage {
+    repeated uint32 address_n = 1;
+    required string siwa_payload = 2;
+}
