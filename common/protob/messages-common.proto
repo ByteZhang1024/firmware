@@ -104,6 +104,7 @@ message PinMatrixRequest {
         PinMatrixRequestType_WipeCodeSecond = 5;
         PinMatrixRequestType_BackupFirst = 6;
         PinMatrixRequestType_BackupSecond = 7;
+        PinMatrixRequestType_AttachToPin = 8000;
     }
 }
 
