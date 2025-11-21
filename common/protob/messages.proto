@@ -642,4 +642,5 @@ enum MessageType {
     MessageType_PassphraseState = 10029 [(wire_out) = true];
     MessageType_UnLockDevice = 10030 [(bitcoin_only) = true, (wire_in) = true];
     MessageType_UnLockDeviceResponse = 10031 [(bitcoin_only) = true, (wire_out) = true];
+    MessageType_UpgradeFileHeader = 10050 [(wire_out) = true, (wire_bootloader) = true];
 }

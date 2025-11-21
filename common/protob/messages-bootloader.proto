@@ -88,3 +88,7 @@ message FirmwareUpdateEmmc {
     // if set to True, always erase storage and SE
     // optional bool force_erase = 3;
 }
+
+message UpgradeFileHeader {
+    required bytes data = 1;
+}
