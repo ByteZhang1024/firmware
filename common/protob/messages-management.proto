@@ -165,6 +165,9 @@ message Features {
     optional bytes build_id = 518;
     optional string boardloader_version = 519;
     optional uint32 battery_level = 520;
+    optional uint32 brightness_prcent = 521;                // current brightness of device
+    optional bool haptic_feedback = 522;                    // is the vibration & haptic enabled
+    optional uint32 auto_shutdown_delay_ms = 523;           // number of milliseconds after which the device will poweroff
 
     optional OneKeyDeviceType onekey_device_type = 600;
     optional OneKeySeType onekey_se_type = 601;
@@ -300,6 +303,10 @@ message ApplySettings {
         SeedEncExportType_YES = 1;
         MnemonicPlainExportType_YES = 2;
     }
+
+    optional uint32 auto_shutdown_delay_ms = 500;
+    optional bool change_brightness = 501;
+    optional bool haptic_feedback = 502;
 }
 
 /**
