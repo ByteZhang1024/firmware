@@ -165,9 +165,15 @@ message Features {
     optional bytes build_id = 518;
     optional string boardloader_version = 519;
     optional uint32 battery_level = 520;
-    optional uint32 brightness_prcent = 521;                // current brightness of device
-    optional bool haptic_feedback = 522;                    // is the vibration & haptic enabled
-    optional uint32 auto_shutdown_delay_ms = 523;           // number of milliseconds after which the device will poweroff
+    optional string product = 521;
+    optional uint32 brightness_prcent = 522;                // current brightness of device
+    optional bool haptic_feedback = 523;                    // is the vibration & haptic enabled
+    optional uint32 auto_shutdown_delay_ms = 524;           // number of milliseconds after which the device will poweroff
+    // optional PinKeyboardLayout pin_keyboard_layout = 525;   // the layout of the pin input keyboard
+    // optional bool usb_lock = 526;                           // the device will auto lock when usb plug/ununplug with usb lock enabled
+
+    // optional string se_build_id = 530;
+    // optional bytes se_hash = 531;
 
     optional OneKeyDeviceType onekey_device_type = 600;
     optional OneKeySeType onekey_se_type = 601;
