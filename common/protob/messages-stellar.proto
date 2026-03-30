@@ -59,7 +59,7 @@ message StellarSignTx {
     optional uint64 memo_id = 12;            // 8-byte uint64
     optional bytes memo_hash = 13;           // 32 bytes representing a hash
     required uint32 num_operations = 14;     // number of operations in this transaction
-    optional bool is_soroban_transaction = 60[default=false]; // soroban transaction
+    optional uint32 soroban_data_size = 60[default=0]; // soroban transaction
 
     // https://github.com/stellar/stellar-core/blob/02d26858069de7c0eefe065056fb0a19bf72ea56/src/xdr/Stellar-transaction.x#L506-L513
     enum StellarMemoType {
@@ -278,8 +278,10 @@ message StellarInvokeHostFunctionOp {
     optional string source_account = 1;          // (optional) source account address
     required string contract_address = 2;         // contract id string
     required string function_name = 3;           // invoked contract function name (SCSymbol, max 32 bytes)
-    required bytes call_args_xdr = 4;            // invokecontract call args xdr bytes
-    required bytes soroban_auth_xdr = 5;         // soroban authorization entries xdr
+    required uint32 call_args_xdr_size = 4;      // the total size of call args xdr 
+    required bytes call_args_xdr_initial_chunk = 5;     // invokecontract call args xdr bytes
+    required uint32 soroban_auth_xdr_size = 6;
+    required bytes soroban_auth_xdr_initial_chunk = 7;         // soroban authorization entries xdr
 }
 
 /**
@@ -287,6 +289,14 @@ message StellarInvokeHostFunctionOp {
  * @next StellarSorobanDataAck
  */
 message StellarSorobanDataRequest {
+    required StellarRequestType type = 1; 
+    required uint32 data_length = 2;  // Number of bytes being requested (<= 1024)
+
+    enum StellarRequestType {
+        CALL = 0;
+        AUTH = 1;
+        EXT = 2;
+    }
 }
 
 /**
