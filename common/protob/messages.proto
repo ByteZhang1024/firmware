@@ -523,6 +523,10 @@ enum MessageType {
     MessageType_KaspaSignedTx = 11303 [(wire_out) = true];
     MessageType_KaspaTxInputRequest = 11304 [(wire_out) = true];
     MessageType_KaspaTxInputAck = 11305 [(wire_in) = true];
+    MessageType_KaspaTxRequest = 11306 [(wire_out) = true];
+    MessageType_KaspaTxAckInput = 11307 [(wire_in) = true];
+    MessageType_KaspaTxAckOutput = 11308 [(wire_in) = true];
+    MessageType_KaspaTxAckPayloadChunk = 11309 [(wire_in) = true];
 
     // Nexa
     MessageType_NexaGetAddress = 11400 [(wire_in) = true];
